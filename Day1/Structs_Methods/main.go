@@ -57,3 +57,7 @@ func (p Person) Greet() {
 func (p *Person) SetAge(newAge int) {
 	p.Age = int16(newAge)
 }
+
+
+
+//Attaching a function to a struct creates a method defining the functionality

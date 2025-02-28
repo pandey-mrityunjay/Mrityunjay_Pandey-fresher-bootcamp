@@ -18,10 +18,19 @@ This project is a simple **Go-based web server** that:
 ---
 
 ## 📂 Project Structure
-/project-root 
-    │── /static 
-       ├── index.html        # Home page │
-       ├── form.html         # Form submission page │  
-       ├── styles.css        # CSS styles for UI 
-    │── main.go               # Go web server 
-    │── README.md             # Project documentation
+/project-root
+│── /static
+│   ├── index.html      # Home page
+│   ├── form.html       # Form submission page
+│   ├── styles.css      # CSS styles for UI
+│── main.go             # Go web server
+│── README.md           # Project documentation
+
+## 🛠️ Setup & Installation
+
+### **1️⃣ Prerequisites**
+- Install **Go (>=1.18)**
+- Clone this repository:
+  ```sh
+  git clone https://github.com/your-repo/go-web-server.git
+  cd go-web-server

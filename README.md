@@ -101,3 +101,13 @@
 
 ### Error Handling
 - [Go by Example - Errors](https://gobyexample.com/errors)
+
+
+
+
+
+
+## Data Race Prevention:
+One of the key benefits of Go’s concurrency model is the prevention of data races. Data races occur when multiple goroutines access and modify shared data without proper synchronization. In Go, data races are discouraged by design.
+
+Goroutines and channels promote safe concurrent programming. Since goroutines execute concurrently but not necessarily simultaneously, you can avoid race conditions by ensuring that only one goroutine can access a piece of shared data at a time through proper synchronization with channels or other synchronization primitives.

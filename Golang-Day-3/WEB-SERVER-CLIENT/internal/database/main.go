@@ -21,6 +21,12 @@ func InitDB() *gorm.DB {
 
 	DB = database
 	fmt.Println("✅ Database connected successfully")
+
+	err = DB.AutoMigrate(&Student{})
+	if err != nil {
+		log.Fatal("❌ Migration failed:", err)
+	}
+	log.Println("✅ Database connected and migration complete!")
 	return DB
 }
 func GetDB() *gorm.DB {

@@ -39,8 +39,5 @@ func (n *NotesService) CreateNotesService() Note {
 // ✅ Check database connection properly
 func (n *NotesService) CheckDatabaseConnection() bool {
 	fmt.Println("Inside Notes Service DB Connection")
-	if n.DB != nil {
-		return true
-	}
-	return false
+	return n.DB != nil
 }

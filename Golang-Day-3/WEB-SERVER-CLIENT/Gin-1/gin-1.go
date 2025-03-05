@@ -15,6 +15,7 @@ func main() {
 
 	// Initialize the database
 	db := database.InitDB()
+	database.MigrateDB(db)
 
 	// Initialize the NotesService with DB
 	notesService := services.NewNotesService(db)
@@ -26,6 +27,14 @@ func main() {
 
 	// ✅ Ensure the controller is actually used
 	notesController.InitNotesControllerRoutes(router)
+
+
+	studentService:=services.NewStudentService(db)
+	studentController:=controllers.NewStudentController(studentService)
+
+
+	//Register Routes 
+	studentController.RegisterRoutes(router)
 
 	// Start the server
 	router.Run(":8000")
